@@ -8,24 +8,22 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
-     *
-     * @return void
      */
-    public function up()
+    public function up(): void
     {
-        Schema::create('tb_isi_artikel', function (Blueprint $table) {
+        Schema::create('table_admin', function (Blueprint $table) {
             $table->id();
+            $table->string('username',25);
+            $table->string('password',25);
             $table->timestamps();
         });
     }
 
     /**
      * Reverse the migrations.
-     *
-     * @return void
      */
-    public function down()
+    public function down(): void
     {
-        Schema::dropIfExists('tb_isi_artikel');
+        Schema::dropIfExists('table_admin');
     }
 };

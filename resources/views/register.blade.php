@@ -9,9 +9,10 @@
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
 </head>
 <body>
-    <div class="container"><br>
+    <div class="container-fluid"><br>
         <div class="col-md-4 col-md-offset-4">
-            <h2 class="text-center">FORM REGISTER USER</h3>
+            <div class="text-center mb-3">
+            <h3 class="text-primary"><i class=></i>CABANGIN</h3></div>
             <hr>
             @if(session('message'))
             <div class="alert alert-success">
@@ -21,16 +22,25 @@
             <form action="{{route('actionregister')}}" method="post">
             @csrf
                 <div class="form-group">
+                <label><i class="fa fa-user"></i> Nama</label>
+                    <input type="text" name="nama" class="form-control" placeholder="Masukkan Nama" required="">
+                </div>
+                <div class="form-group">
                     <label><i class="fa fa-user"></i> Username</label>
-                    <input type="username" name="username" class="form-control" placeholder="Username" required="">
+                    <input type="text" name="username" class="form-control" placeholder="Masukkan Username" required="">
+                </div>
+                <div class="form-group">
+                    <label><i class="fa fa-user"></i> Admin</label>
+                    <input type="text" name="admin" class="form-control" placeholder="" required="">
                 </div>
                 <div class="form-group">
                     <label><i class="fa fa-key"></i> Password</label>
-                    <input type="password" name="password" class="form-control" placeholder="Password" required="">
+                    <input type="password" name="password" class="form-control" placeholder="Masukkan Password" required="">
                 </div>
-                <button type="submit" class="btn btn-primary btn-block"><i class="fa fa-user"></i> Register</button>
+                <h2 class="text-center">
+                <button type="submit" class="btn btn-lg btn-primary py-3 w-100 mb-4"><i class="fa fa-user"></i> SIGN UP</button></h3>
                 <hr>
-                <p class="text-center">Sudah punya akun silahkan <a href="login">Login Disini!</a></p>
+                <p class="text-center">Have an Account? <a href="login">SIGN IN Here!</a></p>
             </form>
         </div>
     </div>
